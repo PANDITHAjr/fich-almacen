@@ -19,6 +19,16 @@ class CreateEntradaTable extends Migration
             $table->string('cantidad');
             $table->string('nro_ofi');
             $table->timestamps();
+
+            $table->unsignedBigInteger('id_personal');
+            $table->foreign('id_personal')->references('id')->on('personal')->cascadeOnDelete()->cascadeOnUpdate();
+
+            $table->unsignedBigInteger('id_producto');
+            $table->foreign('id_producto')->references('id')->on('producto')->cascadeOnDelete()->cascadeOnUpdate();
+
+            $table->unsignedBigInteger('id_productoo');
+            $table->foreign('id_productoo')->references('id')->on('producto')->cascadeOnDelete()->cascadeOnUpdate();
+
         });
     }
 

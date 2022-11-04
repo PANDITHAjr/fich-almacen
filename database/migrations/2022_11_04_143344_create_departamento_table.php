@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePersonalTable extends Migration
+class CreateDepartamentoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreatePersonalTable extends Migration
      */
     public function up()
     {
-        Schema::create('personal', function (Blueprint $table) {
+        Schema::create('departamento', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('edad');
-            $table->string('telefono');
-            $table->string('direcion');
+            $table->string('nombre_depa');
             $table->timestamps();
+
+
+            $table->unsignedBigInteger('id_salida');
+            $table->foreign('id_salida')->references('id')->on('salida')->cascadeOnDelete()->cascadeOnUpdate();
+
         });
     }
 
@@ -31,6 +32,6 @@ class CreatePersonalTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personal');
+        Schema::dropIfExists('departamento');
     }
 }

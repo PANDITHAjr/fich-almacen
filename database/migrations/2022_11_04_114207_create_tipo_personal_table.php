@@ -17,6 +17,10 @@ class CreateTipoPersonalTable extends Migration
             $table->id();
             $table->string('descripcion');
             $table->timestamps();
+
+            $table->unsignedBigInteger('id_personal');
+            $table->foreign('id_personal')->references('id')->on('personal')->cascadeOnDelete()->cascadeOnUpdate();
+
         });
     }
 

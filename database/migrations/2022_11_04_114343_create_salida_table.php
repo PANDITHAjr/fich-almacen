@@ -19,6 +19,11 @@ class CreateSalidaTable extends Migration
             $table->string('cantidad');
             $table->string('nro_entrega');
             $table->timestamps();
+
+            $table->unsignedBigInteger('id_personal');
+            $table->foreign('id_personal')->references('id')->on('personal')->cascadeOnDelete()->cascadeOnUpdate();
+
+
         });
     }
 
