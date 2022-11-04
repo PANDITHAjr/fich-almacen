@@ -15,6 +15,9 @@ class CreateSalidaTable extends Migration
     {
         Schema::create('salida', function (Blueprint $table) {
             $table->id();
+            $table->date('fecha');
+            $table->string('cantidad');
+            $table->string('nro_entrega');
             $table->timestamps();
         });
     }

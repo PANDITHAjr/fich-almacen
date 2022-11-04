@@ -15,6 +15,9 @@ class CreateEntradaTable extends Migration
     {
         Schema::create('entrada', function (Blueprint $table) {
             $table->id();
+            $table->date('fecha');
+            $table->string('cantidad');
+            $table->string('nro_ofi');
             $table->timestamps();
         });
     }
