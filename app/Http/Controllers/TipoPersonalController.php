@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use TipoPersonal;
+use App\Models\TipoPersonal;
 use Illuminate\Http\Request;
 
 class TipoPersonalController extends Controller
@@ -12,6 +12,7 @@ class TipoPersonalController extends Controller
     {
        $tipo_personales = TipoPersonal::all();
        return view('tipo_personal.index', compact('tipo_personales'));
+
     }
 
     public function create()

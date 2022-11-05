@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\personal;
+use App\Models\Personal;
 use Illuminate\Http\Request;
 
 class PersonalController extends Controller
 {
     public function index(){
-        $personales = personal::all();
+        $personales = Personal::all();
         return view('personal.index', compact('personales'));
-
     }
 
     public function create(){
