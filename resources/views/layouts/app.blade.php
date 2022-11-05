@@ -3,7 +3,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alquiler</title>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('https://img.icons8.com/external-prettycons-flat-prettycons/47/null/external-university-education-prettycons-flat-prettycons-1.png ') }}">
+    <link rel="shortcut icon" sizes="192x192" href="{{ asset('https://img.icons8.com/external-prettycons-flat-prettycons/47/null/external-university-education-prettycons-flat-prettycons-1.png') }}">
+    <title>FICH</title>
 
     @include('layouts.styles')
     @stack('styles')

@@ -4,7 +4,7 @@
     </header>
 @endauth
 
-<nav class="navbar nav-extended no-padding dark-primary-color">
+<nav class="navbar nav-extended no-padding teal black">
     <div class="nav-wrapper">
         @auth
         <a href="{{ route('home') }}" class="brand-logo center hide-on-small-only">INVENTARIO - FICH</a>
