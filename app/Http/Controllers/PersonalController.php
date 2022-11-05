@@ -14,7 +14,8 @@ class PersonalController extends Controller
 
     public function create(){
         //$tipo_personal = TipoPersonal::all();
-        return view('personal.create', compact('tipo_personal'));
+        //return view('personal.create', compact('tipo_personal'));
+        return view('personal.create');
     }
     public function store(Request $request){
         $personal = new Personal();
@@ -38,7 +39,8 @@ class PersonalController extends Controller
 
         $personal = Personal::findOrFail($id);
         //$tipo_personal = TipoPersonal::all();
-        return view('personal.edit', compact('personal','tipo_personal'));
+        //return view('personal.edit', compact('personal','tipo_personal'));
+        return view('personal.edit');
     }
     public function update(Request $request, $id){
         $personal = Personal::findOrFail($id);
