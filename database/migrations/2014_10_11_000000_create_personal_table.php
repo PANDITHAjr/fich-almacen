@@ -22,6 +22,8 @@ class CreatePersonalTable extends Migration
             $table->string('direcion');
             $table->timestamps();
 
+            $table->unsignedBigInteger('id_tipo_personal');
+            $table->foreign('id_tipo_personal')->references('id')->on('tipo_personal')->cascadeOnDelete()->cascadeOnUpdate();
 
         });
     }
