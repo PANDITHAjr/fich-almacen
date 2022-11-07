@@ -15,6 +15,7 @@ class EntradaController extends Controller
         return view('entrada.index', compact('entradas'));
     }
 
+    
     public function create(){
         $personal = Personal::all();
         return view('entrada.create', compact('personal'));
