@@ -47,7 +47,7 @@ class Userseeder extends Seeder
         $personal->nombre = 'Brayan';
         $personal->apellido = 'Ferrfino Corales';
         $personal->edad = '22';
-        $personal->telefono = '78451236';
+        $personal->telefono = '784654636';
         $personal->direcion = 'camiri';
         $personal->id_tipo_personal = '2';
         $personal->save();
