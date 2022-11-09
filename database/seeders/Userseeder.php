@@ -38,29 +38,8 @@ class Userseeder extends Seeder
         $user->save();
 
 
-
-        $tipo_personal = new TipoPersonal();
-        $tipo_personal->descripcion = 'Jefe';
-        $tipo_personal->save();
-
-        $personal = new Personal();
-        $personal->nombre = 'Brayan';
-        $personal->apellido = 'Ferrfino Corales';
-        $personal->edad = '22';
-        $personal->telefono = '784654636';
-        $personal->direcion = 'camiri';
-        $personal->id_tipo_personal = '2';
-        $personal->save();
-
-        $user = new User();
-        $user->name = 'Bryan';
-        $user->email = 'brayan@gmail.com';
-        $user->password = bcrypt('123456789');
-        $user->id_personal = '2';
-        $user->save();
         $tipo_personal = new TipoPersonal();
         $tipo_personal->descripcion = 'jefe';
-        $tipo_personal->save();
 
         $personal = new Personal();
         $personal->nombre = 'Brayan';

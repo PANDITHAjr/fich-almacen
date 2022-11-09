@@ -1,4 +1,4 @@
-<ul id="sidenav-left" class="sidenav blue accent-1">
+<ul id="sidenav-left" class="sidenav indigo darken-4">
     <li>
         <div class="user-view center">
             <div class="background">
@@ -17,8 +17,8 @@
             <a href="#email"><span class="white-text email">{{ auth()->user()->email }}</span></a>
         </div>
     </li>
-    <li><a class="subheader black-text">Administración</a></li>
-    <li><a class="waves-effect" href="#">Gestionar Personas<i class="material-icons">class</i></a></li>
-    <li><a class="waves-effect" href="#">Gestionar Productos<i class="material-icons">class</i></a></li>
-    <li><a class="waves-effect" href="#">Gestionar Ventas<i class="material-icons">class</i></a></li>
+    <li><a  class="subheader black-text">Administración:</a></li>
+    <li><a  style="color: #d50000"class="waves-effect" href="#">Gestionar Personas<i class="material-icons">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="#">Gestionar Productos<i class="material-icons">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="#">Gestionar Ventas<i class="material-icons">class</i></a></li>
 </ul>

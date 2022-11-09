@@ -11,7 +11,7 @@
             <div class="card green lighten-5">
                 <div class="card-content">
 
-                    <div style="color: blue" class="card-title">Inicio de sesión</div>
+                    <div style="color: red" class="card-title">Inicio de sesión</div>
 
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -33,7 +33,7 @@
                                 <input type="password" name="password" id="password">
                                 <label for="password">Contraseña</label>
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="blue-text" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -42,15 +42,14 @@
 
                         <div class="form-group row mb-0">
                             <div class="col s12 center">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary indigo darken-4">
                                     ingresar
                                 </button>
 
-                                {{-- @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                    <a class="btn btn-primary red accent-4" href="https://api.whatsapp.com/send?phone=59167671718">
+                                        {{ __('Olvidaste tu Usuario?') }}
                                     </a>
-                                @endif --}}
+
                             </div>
                         </div>
                     </form>
