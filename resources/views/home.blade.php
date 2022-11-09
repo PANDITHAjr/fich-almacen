@@ -17,7 +17,7 @@
 
                             </div>
                             <div class="card-action">
-                                <a href="#", class="btn btn-floating red pulse"><i class="material-icons">confirmation_number</i></a>
+                                <a href="#", class="btn btn-floating red accent-4 pulse"><i class="material-icons">account_balance</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">SCTOK</a>
                             </div>
                         </div>
@@ -34,8 +34,8 @@
 
                             </div>
                             <div class="card-action">
-                                <a href="#", class="btn btn-floating yellow pulse"><i class="material-icons">airport_shuttle</i></a>
-                                <a style="color:brown; font-size: 14px; font-family: Georgia;">RESG. ENTRADAS</a>
+                                <a href="#", class="btn btn-floating indigo darken-4 pulse"><i class="material-icons">assignment_returned</i></a>
+                                <a style="color:#d50000; font-size: 14px; font-family: Georgia;">RESG. ENTRADAS</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
 
                             </div>
                             <div class="card-action">
-                                <a href="#", class="btn btn-floating green pulse"><i class="material-icons">airline_seat_recline_normal</i></a>
+                                <a href="#", class="btn btn-floating red accent-4 pulse"><i class="material-icons">forward</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;"> RESG. SALIDAS</a>
                             </div>
                         </div>
