@@ -25,7 +25,7 @@
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Nombre:</p>
+                            <p class="primary-text-color secondary-text-style">Usuario:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
                             <p class="secondary-text-color">{{$usuario->name}}</p>
@@ -34,10 +34,10 @@
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Contraseña:</p>
+                            <p class="primary-text-color secondary-text-style">Tipo Personal:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p class="secondary-text-color">{{$usuario->password}}</p>
+                            <p class="secondary-text-color">{{$usuario->personal->Tipo_Personal->descripcion}}</p>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@
                         </div>
                     </div>
 
-                        
+
                     <div class="card-action right-align">
                         <a href="{{ route('usuario.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>
                     </div>

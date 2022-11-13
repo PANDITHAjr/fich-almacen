@@ -20,7 +20,7 @@ class Personal extends Model
 
     public function Tipo_Personal(){
 
-        return $this->belongsTo(Tipo_Personal::class, 'id_tipo_personal');
+        return $this->belongsTo(TipoPersonal::class, 'id_tipo_personal');
 
     }
 

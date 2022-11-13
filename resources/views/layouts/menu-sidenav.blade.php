@@ -14,7 +14,7 @@
                 </div>
             </div>
             <a href="#name"><span class="white-text name">{{ auth()->user()->personal->nombre.' '.auth()->user()->personal->apellido }}</span></a>
-            <a href="#email"><span class="white-text email">{{ auth()->user()->email }}</span></a>
+            <a href="#email"><span class="white-text email">{{ auth()->user()->personal->Tipo_Personal->descripcion }}</span></a>
         </div>
     </li>
     <li><a  class="subheader black-text">Administración:</a></li>
