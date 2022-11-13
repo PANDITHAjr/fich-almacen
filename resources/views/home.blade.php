@@ -17,7 +17,7 @@
 
                             </div>
                             <div class="card-action">
-                                <a href="#", class="btn btn-floating red accent-4 pulse"><i class="material-icons">account_balance</i></a>
+                                <a href="{{ route('producto.index') }}", class="btn btn-floating red accent-4 pulse"><i class="material-icons">account_balance</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;">SCTOK</a>
                             </div>
                         </div>
