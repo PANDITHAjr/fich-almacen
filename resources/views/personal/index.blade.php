@@ -17,7 +17,6 @@
                         <th>ID</th>
                         <th>nombre</th>
                         <th>apellido</th>
-                        <th>edad</th>
                         <th>telefono</th>
                         <th>direcion</th>
                     </tr>
@@ -28,7 +27,6 @@
                                 <td>{{ $personal->id }}</td>
                                 <td>{{ $personal->nombre }}</td>
                                 <td>{{ $personal->apellido }}</td>
-                                <td>{{ $personal->edad }}</td>
                                 <td>{{ $personal->telefono }}</td>
                                 <td>{{ $personal->direcion }}</td>
                                 <td>

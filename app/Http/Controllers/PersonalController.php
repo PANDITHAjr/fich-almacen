@@ -21,7 +21,6 @@ class PersonalController extends Controller
         $personal = new Personal();
         $personal->nombre = $request->input('nombre');
         $personal->apellido = $request->input('apellido');
-        $personal->edad = $request->input('edad');
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
         //$personal->id_tipo_personal = $request->input('id_tipo_personal');
@@ -46,7 +45,6 @@ class PersonalController extends Controller
         $personal = Personal::findOrFail($id);
         $personal->nombre = $request->input('nombre');
         $personal->apellido = $request->input('apellido');
-        $personal->edad = $request->input('edad');
         $personal->telefono = $request->input('telefono');
         $personal->direccion = $request->input('direccion');
         //$personal->id_tipo_personal = $request->input('id_tipo_personal');

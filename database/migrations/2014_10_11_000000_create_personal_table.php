@@ -17,7 +17,6 @@ class CreatePersonalTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('edad');
             $table->string('telefono');
             $table->string('direcion');
             $table->timestamps();
