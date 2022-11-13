@@ -22,12 +22,21 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col s4 offset-s4">
+                            <div class="row valign-wrapper">
+                                <div class="col s12">
+                                    <img src="https://mstq.io/wp-content/uploads/2019/12/Upgrading-Design-Strategy-with-Psychographic-Personas.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <div class="row">
                             <div class="col s12 m5">
-                                <p class="primary-text-color secondary-text-style">Descripcion:</p>
+                                <p style="color: #d50000" class="primary-text-color secondary-text-style">Descripcion:</p>
                             </div>
                             <div class="col s8 offset-s2 m7">
-                                <p class="secondary-text-color">{{$tipo_personal->descripcion}}</p>
+                                <p style="color: #1a237e" class="secondary-text-color">{{$tipo_personal->descripcion}}</p>
                             </div>
                     </div>
                     <div class="card-action right-align">

@@ -25,37 +25,37 @@
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Usuario:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Usuario:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p class="secondary-text-color">{{$usuario->name}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->name}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Tipo Personal:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Tipo Personal:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p class="secondary-text-color">{{$usuario->personal->Tipo_Personal->descripcion}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->personal->Tipo_Personal->descripcion}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Email:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Email:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p class="secondary-text-color">{{$usuario->email}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->email}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Nombre de personal:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Nombre de personal:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p class="secondary-text-color">{{$usuario->personal->nombre.' '.$usuario->personal->apellido}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->personal->nombre.' '.$usuario->personal->apellido}}</p>
                         </div>
                     </div>
 
