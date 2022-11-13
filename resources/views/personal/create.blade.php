@@ -18,9 +18,9 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="nombres" type="text" class="validate" name="nombres" value="{{old('nombres')}}">
-                                <label for="nombres">Nombres:</label>
-                                @error('nombres')
+                                <input id="nombre" type="text" class="validate" name="nombre" value="{{old('nombre')}}">
+                                <label for="nombre">Nombres:</label>
+                                @error('nombre')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
@@ -34,9 +34,9 @@
                             </div>
 
                             <div class="input-field col s12 m4">
-                                <input id="direccion" type="text" class="validate" name="direccion" value="{{old('direccion')}}">
-                                <label for="direccion">Dirección:</label>
-                                @error('direccion')
+                                <input id="direcion" type="text" class="validate" name="direcion" value="{{old('direcion')}}">
+                                <label for="direcion">Direción:</label>
+                                @error('direcion')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
@@ -49,16 +49,17 @@
                                 @enderror
                             </div>
 
-                            <div class="input-field col s12 m4">
-                                <select name="genero" id="genero">
-                                    <option value="M">Masculino</option>
-                                    <option value="F">Femenino</option>
+                            <div class="input-field col s12 m6">
+                                <select name="id_tipo_personal">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($tipo_personal as $personal)
+                                    <option value="{{ $personal->id }}">{{ $personal->descripcion}}</option>
+                                    @endforeach
                                 </select>
-                                <label for="genero">Genero:</label>
-                                @error('genero')
-                                <span class="help-block red-text"> {{ $message }} </span>
-                                @enderror
+                                <label for="id_tipo_personal">Personal:</label>
                             </div>
+
+                        </div>
                         </div>
 
                         <div class="card-action right-align">

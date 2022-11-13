@@ -6,7 +6,7 @@
             @csrf
             @method('PUT')
 
-            <div class="col s12 m10 offset-m1 l6 offset-l3 xl6 offset-xl3">
+            <div class="col s12 m10 offset-m1 l6 offset-l3 xl8 offset-xl2">
                 <div id="panel-left" class="card">
 
                     <div class="card-content">
@@ -19,30 +19,30 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="nombres" type="text" class="validate" name="nombres" value="{{ $personal->nombres }}">
-                                <label for="nombres">Nombres:</label>
-                                @error('nombres')
+                                <input id="nombre" type="text" class="validate" name="nombre" value="{{ $personal->nombre }}">
+                                <label for="nombre">Nombre:</label>
+                                @error('nombre')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="apellido" type="text" class="validate" name="apellido" value="{{ $personal->apellidos }}">
-                                <label for="apellido">Apellidos:</label>
+                                <input id="apellido" type="text" class="validate" name="apellido" value="{{ $personal->apellido }}">
+                                <label for="apellido">Apellido:</label>
                                 @error('apellido')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
-                            <div class="input-field col s12 m4">
-                                <input id="direccion" type="text" class="validate" name="direccion" value="{{ $personal->direccion }}">
-                                <label for="direccion">Dirección:</label>
-                                @error('direccion')
+                            <div class="input-field col s12 m3">
+                                <input id="direcion" type="text" class="validate" name="direcion" value="{{ $personal->direcion }}">
+                                <label for="direcion">Dirección:</label>
+                                @error('direcion')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
-                            <div class="input-field col s12 m4">
+                            <div class="input-field col s12 m3">
                                 <input id="telefono" type="number" class="validate" name="telefono" value="{{ $personal->telefono }}">
                                 <label for="telefono">telefono:</label>
                                 @error('telefono')
@@ -50,15 +50,15 @@
                                 @enderror
                             </div>
 
-                            <div class="input-field col s12 m4">
-                                <select name="genero" id="genero">
-                                    <option {{ $personal->genero=='M'?'selected':'' }} value="M">Masculino</option>
-                                    <option {{ $personal->genero=='F'?'selected':'' }} value="F">Femenino</option>
+
+                            <div class="input-field col s12 m6">
+                                <select name="id_tipo_personal">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($tipo_personal as $personal)
+                                    <option value="{{ $personal->id }}">{{ $personal->descripcion}}</option>
+                                    @endforeach
                                 </select>
-                                <label for="genero">Genero:</label>
-                                @error('genero')
-                                <span class="help-block red-text"> {{ $message }} </span>
-                                @enderror
+                                <label for="id_tipo_personal">Personal:</label>
                             </div>
                         </div>
 

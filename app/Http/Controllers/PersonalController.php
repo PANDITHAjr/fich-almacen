@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Personal;
+use App\Models\TipoPersonal;
 use Illuminate\Http\Request;
 
 class PersonalController extends Controller
@@ -13,8 +14,8 @@ class PersonalController extends Controller
     }
 
     public function create(){
-        //$tipo_personal = TipoPersonal::all();
-        //return view('personal.create', compact('tipo_personal'));
+        $tipo_personal = TipoPersonal::all();
+        return view('personal.create', compact('tipo_personal'));
         return view('personal.create');
     }
     public function store(Request $request){
@@ -22,8 +23,8 @@ class PersonalController extends Controller
         $personal->nombre = $request->input('nombre');
         $personal->apellido = $request->input('apellido');
         $personal->telefono = $request->input('telefono');
-        $personal->direccion = $request->input('direccion');
-        //$personal->id_tipo_personal = $request->input('id_tipo_personal');
+        $personal->direcion = $request->input('direcion');
+        $personal->id_tipo_personal = $request->input('id_tipo_personal');
         $personal->save();
 
         return redirect()->route('personal.index', $personal->id);
@@ -37,8 +38,8 @@ class PersonalController extends Controller
     public function edit($id){
 
         $personal = Personal::findOrFail($id);
-        //$tipo_personal = TipoPersonal::all();
-        //return view('personal.edit', compact('personal','tipo_personal'));
+        $tipo_personal = TipoPersonal::all();
+        return view('personal.edit', compact('personal','tipo_personal'));
         return view('personal.edit');
     }
     public function update(Request $request, $id){
@@ -46,8 +47,8 @@ class PersonalController extends Controller
         $personal->nombre = $request->input('nombre');
         $personal->apellido = $request->input('apellido');
         $personal->telefono = $request->input('telefono');
-        $personal->direccion = $request->input('direccion');
-        //$personal->id_tipo_personal = $request->input('id_tipo_personal');
+        $personal->direcion = $request->input('direcion');
+        $personal->id_tipo_personal = $request->input('id_tipo_personal');
         $personal->save();
 
         return redirect()->route('personal.index');
