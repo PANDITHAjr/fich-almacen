@@ -12,15 +12,9 @@ class Producto extends Model
 
     protected $table = 'producto';
 
-
-    public function Personal(){
-
-        return $this ->belongsTo(Personal::class, 'id_personal');
-    }
-
     public function Tipo_Producto(){
 
-        return $this ->belongsTo(Tipo_Producto::class, 'id_tipo_producto');
+        return $this ->belongsTo(TipoProducto::class, 'id_tipo_producto');
     }
 
     public function Entrada(){

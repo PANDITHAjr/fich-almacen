@@ -24,10 +24,6 @@ class Personal extends Model
 
     }
 
-    public function Producto(){
-
-        return $this ->hasOne(Producto::class, 'id_producto');
-    }
 
     public function Entrada(){
 

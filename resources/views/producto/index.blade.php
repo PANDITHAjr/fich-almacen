@@ -17,6 +17,8 @@
                         <th>ID</th>
                         <th>nombre</th>
                         <th>unidad</th>
+                        <th>Tipo de Producto</th>
+                        <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -25,6 +27,7 @@
                                 <td>{{ $producto->id }}</td>
                                 <td>{{ $producto->nombre }}</td>
                                 <td>{{ $producto->unidad }}</td>
+                                <td>{{ $producto->Tipo_Producto->descripcion}}</td>
                                 <td>
                                     <a href="{{ route('producto.edit', [$producto->id]) }}"><span class="new badge amber accent-4" data-badge-caption="editar"></span></a>
                                     <a href="{{ route('producto.show', [$producto->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>

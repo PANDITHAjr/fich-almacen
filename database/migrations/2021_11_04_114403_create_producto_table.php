@@ -19,9 +19,6 @@ class CreateProductoTable extends Migration
             $table->string('unidad');
             $table->timestamps();
 
-            $table->unsignedBigInteger('id_personal');
-            $table->foreign('id_personal')->references('id')->on('personal')->cascadeOnDelete()->cascadeOnUpdate();
-
             $table->unsignedBigInteger('id_tipo_producto');
             $table->foreign('id_tipo_producto')->references('id')->on('tipo_producto')->cascadeOnDelete()->cascadeOnUpdate();
 

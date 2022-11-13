@@ -33,6 +33,25 @@
                                 @enderror
                             </div>
 
+                            {{-- <div class="input-field col s12 m6">
+                                <select name="id_personal">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($personal as $personal)
+                                    <option value="{{ $personal->id }}">{{ $personal->nombre}}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_personal">Personal:</label>
+                            </div> --}}
+                             <div class="input-field col s12 m6">
+                                <select name="id_tipo_producto">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($tipo_productos as $producto)
+                                    <option value="{{ $producto->id }}">{{ $producto->descripcion}}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_tipo_producto">Producto:</label>
+                            </div>
+
                         </div>
                         </div>
 

@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="row">
-        <form method="POST" action="{{ route('personal.update', [$personal->id]) }}">
+        <form method="POST" action="{{ route('producto.update', [$producto->id]) }}">
             @csrf
             @method('PUT')
 
@@ -19,7 +19,7 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="nombre" type="text" class="validate" name="nombre" value="{{ $personal->nombre }}">
+                                <input id="nombre" type="text" class="validate" name="nombre" value="{{ $producto->nombre }}">
                                 <label for="nombre">Nombre:</label>
                                 @error('nombre')
                                     <span class="help-block red-text"> {{ $message }} </span>
@@ -27,39 +27,23 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="apellido" type="text" class="validate" name="apellido" value="{{ $personal->apellido }}">
-                                <label for="apellido">Apellido:</label>
-                                @error('apellido')
+                                <input id="unidad" type="text" class="validate" name="unidad" value="{{ $producto->unidad }}">
+                                <label for="unidad">Unidad:</label>
+                                @error('unidad')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
-
-                            <div class="input-field col s12 m3">
-                                <input id="direcion" type="text" class="validate" name="direcion" value="{{ $personal->direcion }}">
-                                <label for="direcion">Dirección:</label>
-                                @error('direcion')
-                                <span class="help-block red-text"> {{ $message }} </span>
-                                @enderror
-                            </div>
-
-                            <div class="input-field col s12 m3">
-                                <input id="telefono" type="number" class="validate" name="telefono" value="{{ $personal->telefono }}">
-                                <label for="telefono">telefono:</label>
-                                @error('telefono')
-                                <span class="help-block red-text"> {{ $message }} </span>
-                                @enderror
-                            </div>
-
 
                             <div class="input-field col s12 m6">
-                                <select name="id_tipo_personal">
+                                <select name="id_tipo_producto">
                                     <option selected disabled>Seleccione una opción:</option>
-                                    @foreach($tipo_personal as $personal)
-                                    <option value="{{ $personal->id }}">{{ $personal->descripcion}}</option>
+                                    @foreach($tipo_producto as $producto)
+                                    <option value="{{ $producto->id }}">{{ $producto->descripcion}}</option>
                                     @endforeach
                                 </select>
-                                <label for="id_tipo_personal">Personal:</label>
+                                <label for="id_tipo_producto">Producto:</label>
                             </div>
+
                         </div>
 
                         <div class="card-action right-align">

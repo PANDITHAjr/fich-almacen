@@ -16,18 +16,15 @@ class ProductoController extends Controller
     }
 
     public function create(){
+        $tipo_productos = TipoProducto::all();
         $personal = Personal::all();
-        return view('producto.create', compact('personal'));
+        return view('producto.create', compact('tipo_productos'));
 
-        $tipo_producto = TipoProducto::all();
-        return view('producto.create', compact('tipo_producto'));
-        return view('producto.create');
     }
     public function store(Request $request){
         $producto = new Producto();
         $producto->nombre = $request->input('nombre');
         $producto->unidad = $request->input('unidad');
-        $producto->id_personal = $request->input('id_personal');
         $producto->id_tipo_producto = $request->input('id_tipo_producto');
         $producto->save();
 
@@ -43,15 +40,14 @@ class ProductoController extends Controller
 
         $producto = Producto::findOrFail($id);
         $tipo_producto = TipoProducto::all();
+        $personal = Personal::all();
         return view('producto.edit', compact('producto','tipo_producto'));
-        return view('producto.edit');
     }
     public function update(Request $request, $id){
 
         $producto = Producto::findOrfail($id);
         $producto->nombre = $request->input('nombre');
         $producto->unidad = $request->input('unidad');
-        $producto->id_personal = $request->input('id_personal');
         $producto->id_tipo_producto = $request->input('id_tipo_producto');
         return redirect()->route('personal.index');
     }

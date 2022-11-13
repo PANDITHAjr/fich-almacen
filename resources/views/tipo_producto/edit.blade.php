@@ -29,7 +29,6 @@
                             </div>
 
                         </div>
-
                         <div class="card-action right-align">
                             <button type="submit" class="btn-floating btn-large blue pulse"><i class="material-icons">save</i></a>
                         </div>
