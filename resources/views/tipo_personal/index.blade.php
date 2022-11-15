@@ -9,12 +9,12 @@
         <div class="col s8">
             <h5>LISTA DE TIPOS PERSONALES</h5>
         </div>
-        <div class="col s12 m12 l12 xl12">
+        <div class="col s10 m10 l10 xl10">
             <div class="card">
                 <table class="striped" cellspacing="0" width="100%">
                     <thead>
                     <tr>
-                        <th>ID</th> 
+                        <th>ID</th>
                         <th>Descripcion</th>
                         <th>Acciones</th>
                     </tr>
