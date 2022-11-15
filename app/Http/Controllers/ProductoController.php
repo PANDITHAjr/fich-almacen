@@ -10,18 +10,21 @@ use Illuminate\Http\Request;
 class ProductoController extends Controller
 {
     //
-    public function index(){
+    public function index()
+    {
         $productos = Producto::all();
+
         return view('producto.index', compact('productos'));
     }
 
-    public function create(){
+    public function create()
+    {
         $tipo_productos = TipoProducto::all();
         $personal = Personal::all();
         return view('producto.create', compact('tipo_productos'));
-
     }
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $producto = new Producto();
         $producto->nombre = $request->input('nombre');
         $producto->unidad = $request->input('unidad');
@@ -29,21 +32,23 @@ class ProductoController extends Controller
         $producto->save();
 
         return redirect()->route('producto.index', $producto->id);
-
     }
-    public function show($id){
+    public function show($id)
+    {
         $producto = Producto::findOrFail($id);
         return view('producto.show', compact('producto'));
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
 
         $producto = Producto::findOrFail($id);
         $tipo_producto = TipoProducto::all();
         $personal = Personal::all();
-        return view('producto.edit', compact('producto','tipo_producto'));
+        return view('producto.edit', compact('producto', 'tipo_producto'));
     }
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
 
         $producto = Producto::findOrfail($id);
         $producto->nombre = $request->input('nombre');
@@ -51,7 +56,8 @@ class ProductoController extends Controller
         $producto->id_tipo_producto = $request->input('id_tipo_producto');
         return redirect()->route('personal.index');
     }
-    public function destroy($id){
+    public function destroy($id)
+    {
         $producto = Producto::findOrFail($id);
         $producto->delete();
 

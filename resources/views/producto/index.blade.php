@@ -28,11 +28,14 @@
                                 <td>{{ $producto->nombre }}</td>
                                 <td>{{ $producto->unidad }}</td>
                                 <td>{{ $producto->Tipo_Producto->descripcion}}</td>
+
+                                {{-- @if (auth()->user()->personal->Tipo_Personal->descripcion == 'Visor') --}}
                                 <td>
                                     <a href="{{ route('producto.edit', [$producto->id]) }}"><span class="new badge amber accent-4" data-badge-caption="editar"></span></a>
                                     <a href="{{ route('producto.show', [$producto->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>
                                     <a href="{{ route('producto.destroy', [$producto->id]) }}"><span class="new badge red" data-badge-caption="eliminar"></span></a>
                                 </td>
+                                {{-- @endif --}}
                             </tr>
                         @endforeach
                     </tbody>

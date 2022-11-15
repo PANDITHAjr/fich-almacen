@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="row">
-        <form method="POST" action="{{ route('producto.store') }}">
+        <form method="POST" action="{{ route('personal.store') }}">
             @csrf
 
             <div class="col s12 m10 offset-m1 l6 offset-l3 xl8 offset-xl2">
