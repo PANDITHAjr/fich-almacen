@@ -37,22 +37,23 @@ class Userseeder extends Seeder
         $user->save();
 
 
-        // $tipo_personal = new TipoPersonal();
-        // $tipo_personal->descripcion = 'empleado';
+        $tipo_personal = new TipoPersonal();
+        $tipo_personal->descripcion = 'jefe';
+        $tipo_personal->save();
 
-        // $personal = new Personal();
-        // $personal->nombre = 'Brayan';
-        // $personal->apellido = 'Ferrufino Corales';
-        // $personal->telefono = '67671718';
-        // $personal->direcion = 'camiri';
-        // $personal->id_tipo_personal = '2';
-        // $personal->save();
-
-        // $user = new User();
-        // $user->name = 'bryan';
-        // $user->email = 'brayan@gmail.com';
-        // $user->password = bcrypt('tupapito11');
-        // $user->id_personal = '2';
-        // $user->save();
+        $personal = new Personal();
+        $personal->nombre = 'Brayan';
+        $personal->apellido = 'Ferrufino Corales';
+        $personal->telefono = '67671718';
+        $personal->direcion = 'camiri';
+        $personal->id_tipo_personal = '2';
+        $personal->save();
+        
+        $user = new User();
+        $user->name = 'bryan';
+        $user->email = 'brayan@gmail.com';
+        $user->password = bcrypt('tupapito11');
+        $user->id_personal = '2';
+        $user->save();
     }
 }
