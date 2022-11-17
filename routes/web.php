@@ -1,11 +1,12 @@
 <?php
 
-
+use App\Http\Controllers\DepartamentoController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\TipoPersonalController;
 use App\Http\Controllers\TipoProductoController;
 use App\Http\Controllers\UserController;
+use App\Models\Departamento;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -88,4 +89,14 @@ Route::group(['prefix'=>'tipo_producto'], function(){
 
 });
 
+Route::group(['prefix'=>'departamento'], function(){
 
+    Route::get('/', [DepartamentoController::class, 'index'])->name('departamento.index');
+    Route::get('/create', [DepartamentoController::class, 'create']) -> name('departamento.create');
+    Route::post('/', [DepartamentoController::class, 'store'])->name('departamento.store');
+    Route::get('/{id}', [DepartamentoController::class, 'show'])->name('departamento.show');
+    Route::get('/{id}/edit', [DepartamentoController::class, 'edit'])->name('departamento.edit');
+    Route::put('/{id}', [DepartamentoController::class, 'update'])->name('departamento.update');
+    Route::get('/{id}/destroy', [DepartamentoController::class, 'destroy'])->name('departamento.destroy');
+
+});

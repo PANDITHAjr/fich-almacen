@@ -13,6 +13,6 @@ class Departamento extends Model
 
     public function Salida(){
 
-        return $this->hasOne(Salida::class, 'id_salida');
+        return $this->belongsTo(Salida::class, 'id_departamento');
     }
 }

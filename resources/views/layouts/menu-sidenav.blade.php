@@ -23,4 +23,5 @@
     <li><a  style="color: #d50000" class="waves-effect" href="{{ route('usuario.index') }}">Gestionar Usuarios<i class="material-icons">class</i></a></li>
     <li><a  style="color: #d50000" class="waves-effect" href="{{ route('producto.index') }}">Gestionar Almacen<i class="material-icons">class</i></a></li>
     <li><a  style="color: #d50000" class="waves-effect" href="{{ route('tipo_producto.index') }}">Gestionar Tipo Productos<i class="material-icons">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('departamento.index') }}">Gestionar Departamento<i class="material-icons">class</i></a></li>
 </ul>

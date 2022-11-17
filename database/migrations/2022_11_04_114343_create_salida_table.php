@@ -23,7 +23,8 @@ class CreateSalidaTable extends Migration
             $table->unsignedBigInteger('id_personal');
             $table->foreign('id_personal')->references('id')->on('personal')->cascadeOnDelete()->cascadeOnUpdate();
 
-
+            $table->unsignedBigInteger('id_departamento');
+            $table->foreign('id_departamento')->references('id')->on('departamento')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 

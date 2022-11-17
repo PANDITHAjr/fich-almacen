@@ -19,8 +19,6 @@ class CreateDepartamentoTable extends Migration
             $table->timestamps();
 
 
-            $table->unsignedBigInteger('id_salida');
-            $table->foreign('id_salida')->references('id')->on('salida')->cascadeOnDelete()->cascadeOnUpdate();
 
         });
     }

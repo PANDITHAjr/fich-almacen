@@ -19,7 +19,7 @@ class Salida extends Model
 
     public function Departamento(){
 
-        return $this->belongsTo(Departamento::class, 'id_departamento');
+        return $this->hasMany(Departamento::class, 'id_departamento');
 
     }
 
