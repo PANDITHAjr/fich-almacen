@@ -38,7 +38,7 @@ class Userseeder extends Seeder
 
 
         $tipo_personal = new TipoPersonal();
-        $tipo_personal->descripcion = 'jefe';
+        $tipo_personal->descripcion = 'gay';
         $tipo_personal->save();
 
         $personal = new Personal();
@@ -48,7 +48,7 @@ class Userseeder extends Seeder
         $personal->direcion = 'camiri';
         $personal->id_tipo_personal = '2';
         $personal->save();
-        
+
         $user = new User();
         $user->name = 'bryan';
         $user->email = 'brayan@gmail.com';

@@ -19,6 +19,7 @@
                         <th>apellido</th>
                         <th>telefono</th>
                         <th>direcion</th>
+                        <th>Tipo Personal</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -29,6 +30,7 @@
                                 <td>{{ $personal->apellido }}</td>
                                 <td>{{ $personal->telefono }}</td>
                                 <td>{{ $personal->direcion }}</td>
+                                <td>{{ $personal->Tipo_Personal->descripcion }}</td>
                                 <td>
                                     <a href="{{ route('personal.show', [$personal->id]) }}"><span class="new badge teal" data-badge-caption="ver"></span></a>
                                     <a href="{{ route('personal.edit', [$personal->id]) }}"><span class="new badge amber accent-4" data-badge-caption="editar"></span></a>

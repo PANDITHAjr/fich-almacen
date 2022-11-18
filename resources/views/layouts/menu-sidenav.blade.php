@@ -1,4 +1,4 @@
-<ul id="sidenav-left" class="sidenav indigo blue darken-1">
+<ul id="sidenav-left" class="sidenav indigo black">
     <li>
         <div class="user-view center">
             <div class="background">
@@ -18,10 +18,10 @@
         </div>
     </li>
     <li><a  class="subheader black-text">Administración:</a></li>
-    <li><a  style="color: #d50000"class="waves-effect" href="{{ route('personal.index') }}">Gestionar Personas<i class="material-icons">class</i></a></li>
-    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('tipo_personal.index') }}">Gestionar Tipo Personal<i class="material-icons">class</i></a></li>
-    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('usuario.index') }}">Gestionar Usuarios<i class="material-icons">class</i></a></li>
-    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('producto.index') }}">Gestionar Almacen<i class="material-icons">class</i></a></li>
-    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('tipo_producto.index') }}">Gestionar Tipo Productos<i class="material-icons">class</i></a></li>
-    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('departamento.index') }}">Gestionar Departamento<i class="material-icons">class</i></a></li>
+    <li><a  style="color: #d50000"class="waves-effect" href="{{ route('personal.index') }}">Gestionar Personas<i class="material-icons" style="color: #1a237e">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('tipo_personal.index') }}">Gestionar Tipo Personal<i class="material-icons" style="color: #1a237e">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('usuario.index') }}">Gestionar Usuarios<i class="material-icons" style="color: #1a237e">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('producto.index') }}">Gestionar Almacen<i class="material-icons" style="color: #1a237e">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('tipo_producto.index') }}">Gestionar Tipo Productos<i class="material-icons" style="color: #1a237e">class</i></a></li>
+    <li><a  style="color: #d50000" class="waves-effect" href="{{ route('departamento.index') }}">Gestionar Departamento<i class="material-icons" style="color: #1a237e">class</i></a></li>
 </ul>

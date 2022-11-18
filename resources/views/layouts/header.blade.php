@@ -4,7 +4,7 @@
     </header>
 @endauth
 
-<nav class="indigo darken-4">
+<nav class="indigo black">
     <div class="nav-wrapper">
         @auth
         <a style="color: #d50000"  href="{{ route('home') }}" class="brand-logo center hide-on-small-only ">INVENTARIO - FICH</a>
