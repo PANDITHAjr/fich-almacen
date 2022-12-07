@@ -1,0 +1,14 @@
+php artisan serve
+php artisan key:generate
+php artisan migrate
+php artisan migrate:reset
+php artisan db:seed
+php artisan db:reset
+
+
+creacion de tablas
+$php artisan make:migration create_personal_table
+
+
+integrar la tabla a al abse de datos con sus atributos
+$php artisan migrate
