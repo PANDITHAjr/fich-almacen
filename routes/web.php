@@ -6,6 +6,9 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\TipoPersonalController;
 use App\Http\Controllers\TipoProductoController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SalidaController;
+use App\Http\Controllers\UnidadController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +42,30 @@ Route::group(['prefix' => 'personal'], function () {
     Route::get('/{id}/destroy', [PersonalController::class, 'destroy'])->name('personal.destroy');
 });
 
+
+Route::group(['prefix'=>'tipo_producto'], function(){
+
+    Route::get('/', [TipoProductoController::class, 'index'])->name('tipo_producto.index');
+    Route::get('/create', [TipoProductoController::class, 'create']) -> name('tipo_producto.create');
+    Route::post('/', [TipoProductoController::class, 'store'])->name('tipo_producto.store');
+    Route::get('/{id}', [TipoProductoController::class, 'show'])->name('tipo_producto.show');
+    Route::get('/{id}/edit', [TipoProductoController::class, 'edit'])->name('tipo_producto.edit');
+    Route::put('/{id}', [TipoProductoController::class, 'update'])->name('tipo_producto.update');
+    Route::get('/{id}/destroy', [TipoProductoController::class, 'destroy'])->name('tipo_producto.destroy');
+
+});
+
+Route::group(['prefix'=>'salida'], function(){
+
+    Route::get('/', [SalidaController::class, 'index'])->name('salida.index');
+    Route::get('/create', [SalidaController::class, 'create']) -> name('salida.create');
+    Route::post('/', [SalidaController::class, 'store'])->name('salida.store');
+    Route::get('/{id}', [SalidaController::class, 'show'])->name('salida.show');
+    Route::get('/{id}/edit', [SalidaController::class, 'edit'])->name('salida.edit');
+    Route::put('/{id}', [SalidaController::class, 'update'])->name('salida.update');
+    Route::get('/{id}/destroy', [SalidaController::class, 'destroy'])->name('salida.destroy');
+
+});
 
 Route::group(['prefix'=>'tipo_personal'], function(){
 
@@ -88,4 +115,15 @@ Route::group(['prefix'=>'tipo_producto'], function(){
 
 });
 
+Route::group(['prefix'=>'unidad'], function(){
+
+    Route::get('/', [UnidadController::class, 'index'])->name('unidado.index');
+    Route::get('/create', [UnidadController::class, 'create']) -> name('unidad.create');
+    Route::post('/', [UnidadController::class, 'store'])->name('unidado.store');
+    Route::get('/{id}', [UnidadController::class, 'show'])->name('unidado.show');
+    Route::get('/{id}/edit', [UnidadController::class, 'edit'])->name('unidado.edit');
+    Route::put('/{id}', [UnidadController::class, 'update'])->name('unidado.update');
+    Route::get('/{id}/destroy', [UnidadController::class, 'destroy'])->name('unidado.destroy');
+
+});
 

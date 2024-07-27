@@ -51,7 +51,7 @@
 
                             </div>
                             <div class="card-action">
-                                <a href="#", class="btn btn-floating red accent-4 pulse"><i class="material-icons">forward</i></a>
+                                <a href="{{ route('salida.index')}}", class="btn btn-floating red accent-4 pulse"><i class="material-icons">forward</i></a>
                                 <a style="color:brown; font-size: 14px; font-family: Georgia;"> RESG. SALIDAS</a>
                             </div>
                         </div>
