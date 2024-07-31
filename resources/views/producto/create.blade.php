@@ -26,13 +26,20 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="unidad" type="text" class="validate" name="unidad" value="{{old('unidad')}}">
-                                <label for="apellido">Unidad:</label>
-                                @error('unidad')
+                                <input id="cantidad" type="number" class="validate" name="cantidad" value="{{old('cantidad')}}">
+                                <label for="cantidad">Cantidad:</label>
+                                @error('cantidad')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
+                            <div class="input-field col s12 m6">
+                                <input id="tipo_material" type="text" class="validate" name="tipo_material" value="{{old('tipo_material')}}">
+                                <label for="tipo_material">Tipo Material:</label>
+                                @error('tipo_material')
+                                <span class="help-block red-text"> {{ $message }} </span>
+                                @enderror
+                            </div>
                             {{-- <div class="input-field col s12 m6">
                                 <select name="id_personal">
                                     <option selected disabled>Seleccione una opción:</option>
@@ -49,7 +56,7 @@
                                     <option value="{{ $producto->id }}">{{ $producto->descripcion}}</option>
                                     @endforeach
                                 </select>
-                                <label for="id_tipo_producto">Producto:</label>
+                                <label for="id_tipo_producto">Tipo Producto:</label>
                             </div>
 
                         </div>

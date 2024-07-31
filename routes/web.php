@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\PersonalController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\TipoPersonalController;
@@ -115,15 +115,15 @@ Route::group(['prefix'=>'tipo_producto'], function(){
 
 });
 
-Route::group(['prefix'=>'unidad'], function(){
+Route::group(['prefix'=>'entrada'], function(){
 
-    Route::get('/', [UnidadController::class, 'index'])->name('unidado.index');
-    Route::get('/create', [UnidadController::class, 'create']) -> name('unidad.create');
-    Route::post('/', [UnidadController::class, 'store'])->name('unidado.store');
-    Route::get('/{id}', [UnidadController::class, 'show'])->name('unidado.show');
-    Route::get('/{id}/edit', [UnidadController::class, 'edit'])->name('unidado.edit');
-    Route::put('/{id}', [UnidadController::class, 'update'])->name('unidado.update');
-    Route::get('/{id}/destroy', [UnidadController::class, 'destroy'])->name('unidado.destroy');
+    Route::get('/', [EntradaController::class, 'index'])->name('entrada.index');
+    Route::get('/create', [EntradaController::class, 'create']) -> name('entrada.create');
+    Route::post('/', [EntradaController::class, 'store'])->name('entrada.store');
+    Route::get('/{id}', [EntradaController::class, 'show'])->name('entrada.show');
+    Route::get('/{id}/edit', [EntradaController::class, 'edit'])->name('entrada.edit');
+    Route::put('/{id}', [EntradaController::class, 'update'])->name('entrada.update');
+    Route::get('/{id}/destroy', [EntradaController::class, 'destroy'])->name('entrada.destroy');
 
 });
 

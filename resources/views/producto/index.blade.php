@@ -16,7 +16,10 @@
                     <tr>
                         <th>ID</th>
                         <th>nombre</th>
-                        <th>unidad</th>
+                        <th>Tipo Material</th>
+                        <th>Entrada</th>
+                        <th>Salida</th>
+                        <th>Stok</th>
                         <th>Tipo de Producto</th>
                         <th>Acciones</th>
                     </tr>
@@ -26,7 +29,10 @@
                             <tr>
                                 <td>{{ $producto->id }}</td>
                                 <td>{{ $producto->nombre }}</td>
-                                <td>{{ $producto->unidad }}</td>
+                                <td>{{ $producto->tipo_material }}</td>
+                                <td>{{ $producto->total_entradas }}</td>
+                                <td>{{ $producto->total_salidas }}</td>
+                                <td>{{ $producto->cantidad }}</td>
                                 <td>{{ $producto->Tipo_Producto->descripcion}}</td>
 
                                 {{-- @if (auth()->user()->personal->Tipo_Personal->descripcion == 'Visor') --}}

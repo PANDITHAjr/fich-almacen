@@ -30,7 +30,7 @@
                             <tr>
                                 <td>{{ $salida->Producto->id }}</td>
                                 <td>{{ $salida->Producto->nombre }}</td>
-                                <td>{{ $salida->TipoMaterial->nombre }}</td>
+                                <td>{{ $salida->Producto->tipo_material }}</td>
                                 <td>{{ $salida->Departamento->nombre }}</td>
                                 <td>{{ $salida->cantidad }}</td>
                                 <td>{{ $salida->personal->nombre}}</td>

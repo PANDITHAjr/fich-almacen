@@ -17,6 +17,7 @@ class CreateProductoTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->integer('cantidad');
+            $table->string('tipo_material');
             $table->timestamps();
 
             $table->unsignedBigInteger('id_tipo_producto');

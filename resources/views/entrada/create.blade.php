@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="row">
-        <form method="POST" action="{{ route('salida.store') }}">
+        <form method="POST" action="{{ route('entrada.store') }}">
             @csrf
 
             <div class="col s12 m10 offset-m1 l6 offset-l3 xl8 offset-xl2">
@@ -35,9 +35,9 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="nro_entrega" type="text" class="validate" name="nro_entrega" value="{{old('nro_entrega')}}">
-                                <label for="nro_entrega">N° de Entrega:</label>
-                                @error('nro_entrega')
+                                <input id="nro_ofi" type="text" class="validate" name="nro_ofi" value="{{old('nro_ofi')}}">
+                                <label for="nro_ofi">N° de Ofi.:</label>
+                                @error('nro_ofi')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
@@ -70,16 +70,6 @@
                                     @endforeach
                                 </select>
                                 <label for="id_producto">Productos:</label>
-                            </div>
-
-                            <div class="input-field col s12 m6">
-                                <select name="id_departamento">
-                                    <option selected disabled>Seleccione una opción:</option>
-                                    @foreach($departamentos as $departamento)
-                                        <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
-                                    @endforeach
-                                </select>
-                                <label for="id_departamento">Departamento:</label>
                             </div>
 
                         </div>

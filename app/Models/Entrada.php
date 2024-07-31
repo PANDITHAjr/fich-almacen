@@ -12,16 +12,19 @@ class Entrada extends Model
     protected $table = 'entrada';
 
 
-    public function Producto(){
+    public function Producto()
+    {
 
-        return $this->belongsTos(Producto::class, 'id_producto');
-
+        return $this->belongsTo(Producto::class, 'id_producto');
     }
 
-    public function Personal(){
+    public function Personal()
+    {
 
         return $this->belongsTo(Personal::class, 'id_personal');
-
     }
+    public function Salida(){
 
+        return $this->belongsTo(Salida::class, 'id_salida');
+    }
 }

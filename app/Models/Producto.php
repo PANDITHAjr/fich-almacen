@@ -9,21 +9,23 @@ class Producto extends Model
 {
     use HasFactory;
 
-
     protected $table = 'producto';
 
-    public function Tipo_Producto(){
-
-        return $this ->belongsTo(TipoProducto::class, 'id_tipo_producto');
+    // Relación con TipoProducto
+    public function Tipo_Producto()
+    {
+        return $this->belongsTo(TipoProducto::class, 'id_tipo_producto');
     }
 
-    public function Entrada(){
-
-        return $this->belongsTo(Entrada::class, 'id_entrada');
+    // Relación con Entradas
+    public function Entradas()
+    {
+        return $this->hasMany(Entrada::class, 'id_producto');
     }
 
-    public function Salida(){
-
-        return $this->belongsTo(Salida::class, 'id_salida');
+    // Relación con Salidas
+    public function Salidas()
+    {
+        return $this->hasMany(Salida::class, 'id_producto');
     }
 }

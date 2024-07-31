@@ -34,7 +34,7 @@
 
                             </div>
                             <div class="card-action">
-                                <a href="#", class="btn btn-floating indigo darken-4 pulse"><i class="material-icons">assignment_returned</i></a>
+                                <a href="{{ route('entrada.index') }}", class="btn btn-floating indigo darken-4 pulse"><i class="material-icons">assignment_returned</i></a>
                                 <a style="color:#d50000; font-size: 14px; font-family: Georgia;">RESG. ENTRADAS</a>
                             </div>
                         </div>

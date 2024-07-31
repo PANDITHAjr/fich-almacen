@@ -29,9 +29,6 @@ class CreateSalidaTable extends Migration
             $table->unsignedBigInteger('id_departamento');
             $table->foreign('id_departamento')->references('id')->on('departamento')->cascadeOnDelete()->cascadeOnUpdate();
 
-            $table->unsignedBigInteger('id_tipo_material');
-            $table->foreign('id_tipo_material')->references('id')->on('tipo_material')->cascadeOnDelete()->cascadeOnUpdate();
-
           });
     }
 

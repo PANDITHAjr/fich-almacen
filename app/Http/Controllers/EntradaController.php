@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Entrada;
 use App\Models\Personal;
 use App\Models\Producto;
+use App\Models\TipoMaterial;
+use App\Models\Salida;
 use Illuminate\Http\Request;
 
 class EntradaController extends Controller
@@ -15,13 +17,11 @@ class EntradaController extends Controller
         return view('entrada.index', compact('entradas'));
     }
 
-    
+
     public function create(){
-        $personal = Personal::all();
-        return view('entrada.create', compact('personal'));
-        $producto = Producto::all();
-        return view('entrada.create', compact('producto'));
-        return view('entrada.create');
+        $personales = Personal::all();
+        $productos = Producto::all();
+        return view('entrada.create', compact('productos', 'personales'));
     }
     public function store(Request $request){
         $entrada = new Entrada();
@@ -31,6 +31,12 @@ class EntradaController extends Controller
         $entrada->id_personal = $request->input('id_personal');
         $entrada->id_producto = $request->input('id_producto');
         $entrada->save();
+
+        $producto = Producto::find($request->input('id_producto'));
+        if ($producto) {
+            $producto->cantidad += $request->input('cantidad');
+            $producto->save();
+        }
 
         return redirect()->route('entrada.index', $entrada->id);
 
