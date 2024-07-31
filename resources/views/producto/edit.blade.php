@@ -27,9 +27,18 @@
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="unidad" type="text" class="validate" name="unidad" value="{{ $producto->unidad }}">
-                                <label for="unidad">Unidad:</label>
-                                @error('unidad')
+                                <input id="cantidad" type="text" class="validate" name="cantidad" value="{{ $producto->cantidad }}">
+                                <label for="cantidad">Cantidad:</label>
+                                @error('cantidad')
+                                <span class="help-block red-text"> {{ $message }} </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="input-field col s12 m6">
+                                <input id="tipo_material" type="text" class="validate" name="tipo_material" value="{{ $producto->tipo_material }}">
+                                <label for="tipo_material">Tipo Material:</label>
+                                @error('tipo_material')
                                 <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
@@ -37,7 +46,7 @@
                             <div class="input-field col s12 m6">
                                 <select name="id_tipo_producto">
                                     <option selected disabled>Seleccione una opción:</option>
-                                    @foreach($tipo_producto as $producto)
+                                    @foreach($tipo_productos as $producto)
                                     <option value="{{ $producto->id }}">{{ $producto->descripcion}}</option>
                                     @endforeach
                                 </select>

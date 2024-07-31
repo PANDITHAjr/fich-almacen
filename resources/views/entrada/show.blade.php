@@ -6,7 +6,7 @@
             <div id="panel-left"  class="card">
                 <div class="card-content">
                     <span class="card-title primary-text-color primary-text-style">
-                        Datos del Usuario
+                        Datos de ENTRADA
                     </span>
 
                     <div class="row">
@@ -25,43 +25,52 @@
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Usuario:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">FECHA:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->name}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$entrada->fecha}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Tipo Personal:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Personal:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->personal->Tipo_Personal->descripcion}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$entrada->personal->nombre .' '.$entrada->personal->apellido}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Email:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Cantidad:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->email}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$entrada->cantidad}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Nombre de personal:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">N° de Oficio:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->personal->nombre.' '.$usuario->personal->apellido}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$entrada->nro_ofi}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 m5">
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Producto::</p>
+                        </div>
+                        <div class="col s8 offset-s2 m7">
+                            <p style="color: #1a237e" class="secondary-text-color">{{$entrada->producto->nombre}}</p>
                         </div>
                     </div>
 
 
                     <div class="card-action right-align">
-                        <a href="{{ route('usuario.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>
+                        <a href="{{ route('entrada.index') }}" class="waves-effect waves-brown btn-flat red-text bold">Atras</a>
                     </div>
                 </div>
             </div>

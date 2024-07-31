@@ -52,18 +52,19 @@ class ProductoController extends Controller
     {
 
         $producto = Producto::findOrFail($id);
-        $tipo_producto = TipoProducto::all();
-        $personal = Personal::all();
-        return view('producto.edit', compact('producto', 'tipo_producto'));
+        $tipo_productos = TipoProducto::all();
+        return view('producto.edit', compact('producto', 'tipo_productos'));
     }
     public function update(Request $request, $id)
     {
 
         $producto = Producto::findOrfail($id);
         $producto->nombre = $request->input('nombre');
-        $producto->unidad = $request->input('unidad');
+        $producto->cantidad = $request->input('cantidad');
+        $producto->id_tipo_material = $request->input('id_tipo_material');
         $producto->id_tipo_producto = $request->input('id_tipo_producto');
-        return redirect()->route('personal.index');
+        
+        return redirect()->route('producto.index');
     }
     public function destroy($id)
     {

@@ -2,9 +2,9 @@
 @section('content')
 
     <div class="row">
-        <form method="POST" action="{{ route('usuario.update', [$usuario->id]) }}">
+        <form method="POST" action="{{ route('entrada.update', [$entrada->id]) }}">
             @csrf
-            @method('PUT') 
+            @method('PUT')
 
             <div class="col s12 m10 offset-m1 l6 offset-l3 xl6 offset-xl3">
                 <div id="panel-left" class="card">
@@ -19,31 +19,29 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="name" type="text" class="validate" name="name" value="{{ $usuario->name }}">
-                                <label for="name">Nombre de Usuario:</label>
-                                @error('name')
+                                <input id="fecha" type="date" class="validate" name="fecha" value="{{ $entrada->fecha }}">
+                                <label for="fecha">Fecha:</label>
+                                @error('fecha')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="email" type="text" class="validate" name="email" value="{{ $usuario->email }}">
-                                <label for="email">Nombre de Usuario:</label>
-                                @error('email')
+                                <input id="cantidad" type="number" class="validate" name="cantidad" value="{{ $entrada->cantidad }}">
+                                <label for="cantidad">Cantidad:</label>
+                                @error('cantidad')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input type="password" name="password" id="password">
-                                <label for="password">Contraseña</label>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <input id="nro_ofi" type="number" class="validate" name="nro_ofi" value="{{ $entrada->nro_ofi }}">
+                                <label for="nro_ofi">N° de Oficio:</label>
+                                @error('nro_ofi')
+                                    <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
-                            
+
                             <div class="input-field col s12 m6">
                                 <select name="id_personal">
                                     <option selected disabled>Seleccione una opción:</option>
@@ -52,9 +50,17 @@
                                     @endforeach
                                 </select>
                                 <label for="id_personal">Personal:</label>
-                            </div>  
+                            </div>
 
-
+                            <div class="input-field col s12 m6">
+                                <select name="id_producto">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($productos as $producto)
+                                    <option value="{{ $producto->id }}">{{ $producto->nombre}}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_producto">PRODUCTOS:</label>
+                            </div>
 
                         </div>
 

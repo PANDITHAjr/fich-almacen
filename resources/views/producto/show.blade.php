@@ -31,21 +31,24 @@
                             <p style="color: #1a237e" class="secondary-text-color">{{$producto->nombre}}</p>
                         </div>
                         <div style="color: #d50000" class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Unidad:</p>
+                            <p class="primary-text-color secondary-text-style">Cantidad:</p>
                         </div>
                         <div style="color: #1a237e" class="col s8 offset-s2 m7">
-                            <p class="secondary-text-color">{{$producto->unidad}}</p>
+                            <p class="secondary-text-color">{{$producto->cantidad}}</p>
                         </div>
 
                         <div style="color: #d50000" class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Teléfono:</p>
+                            <p class="primary-text-color secondary-text-style">Tipo Producto:</p>
                         </div>
                         <div style="color: #1a237e" class="col s8 offset-s2 m7">
                             <p class="secondary-text-color">{{$producto->Tipo_Producto->descripcion}}</p>
                         </div>
 
                         <div style="color: #d50000" class="col s12 m5">
-                            <p class="primary-text-color secondary-text-style">Dirección:</p>
+                            <p class="primary-text-color secondary-text-style">Tipo de Material:</p>
+                        </div>
+                        <div style="color: #1a237e" class="col s8 offset-s2 m7">
+                            <p class="secondary-text-color">{{$producto->tipo_material}}</p>
                         </div>
 
                     </div>
