@@ -2,16 +2,16 @@
 @section('content')
 
     <div class="row">
-        <form method="POST" action="{{ route('usuario.update', [$usuario->id]) }}">
+        <form method="POST" action="{{ route('salida.update', [$salida->id]) }}">
             @csrf
-            @method('PUT') 
+            @method('PUT')
 
             <div class="col s12 m10 offset-m1 l6 offset-l3 xl6 offset-xl3">
                 <div id="panel-left" class="card">
 
                     <div class="card-content">
                         <span class="card-title primary-text-color primary-text-style">
-                            Formulario de Edición
+                            Formulario de Edición Salida
                             </span>
                         <div class="row">
                             <div class="col s12 divider"></div>
@@ -19,31 +19,29 @@
 
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input id="name" type="text" class="validate" name="name" value="{{ $usuario->name }}">
-                                <label for="name">Nombre de Usuario:</label>
-                                @error('name')
+                                <input id="fecha" type="date" class="validate" name="fecha" value="{{ $salida->fecha }}">
+                                <label for="fecha">FECHA:</label>
+                                @error('fecha')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input id="email" type="text" class="validate" name="email" value="{{ $usuario->email }}">
-                                <label for="email">Nombre de Usuario:</label>
-                                @error('email')
+                                <input id="cantidad" type="number" class="validate" name="cantidad" value="{{ $salida->cantidad }}">
+                                <label for="cantidad">Cantidad:</label>
+                                @error('cantidad')
                                     <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
 
                             <div class="input-field col s12 m6">
-                                <input type="password" name="password" id="password">
-                                <label for="password">Contraseña</label>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <input id="nro_entrega" type="text" class="validate" name="nro_entrega" value="{{ $salida->nro_entrega }}">
+                                <label for="nro_entrega">N° de Entrega:</label>
+                                @error('nro_entrega')
+                                    <span class="help-block red-text"> {{ $message }} </span>
                                 @enderror
                             </div>
-                            
+
                             <div class="input-field col s12 m6">
                                 <select name="id_personal">
                                     <option selected disabled>Seleccione una opción:</option>
@@ -52,9 +50,27 @@
                                     @endforeach
                                 </select>
                                 <label for="id_personal">Personal:</label>
-                            </div>  
+                            </div>
 
+                            <div class="input-field col s12 m6">
+                                <select name="id_departamento">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($departamentos as $departamento)
+                                    <option value="{{ $departamento->id }}">{{ $departamento->nombre}}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_departamento">Departamento:</label>
+                            </div>
 
+                            <div class="input-field col s12 m6">
+                                <select name="id_producto">
+                                    <option selected disabled>Seleccione una opción:</option>
+                                    @foreach($productos as $producto)
+                                    <option value="{{ $producto->id }}">{{ $producto->nombre}}</option>
+                                    @endforeach
+                                </select>
+                                <label for="id_producto">Productos:</label>
+                            </div>
 
                         </div>
 

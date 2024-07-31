@@ -6,7 +6,7 @@
             <div id="panel-left"  class="card">
                 <div class="card-content">
                     <span class="card-title primary-text-color primary-text-style">
-                        Datos del Usuario
+                        Datos del Salida
                     </span>
 
                     <div class="row">
@@ -25,28 +25,28 @@
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Usuario:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Fecha:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->name}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$salida->fecha}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Tipo Personal:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Cantidad:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->personal->Tipo_Personal->descripcion}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$salida->cantidad}}</p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col s12 m5">
-                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Email:</p>
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">N° de Salida:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->email}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$salida->nro_entrega}}</p>
                         </div>
                     </div>
 
@@ -55,7 +55,25 @@
                             <p style="color: #d50000" class="primary-text-color secondary-text-style">Nombre de personal:</p>
                         </div>
                         <div class="col s8 offset-s2 m7">
-                            <p style="color: #1a237e" class="secondary-text-color">{{$usuario->personal->nombre.' '.$usuario->personal->apellido}}</p>
+                            <p style="color: #1a237e" class="secondary-text-color">{{$salida->personal->nombre.' '.$salida->personal->apellido}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 m5">
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Productos:</p>
+                        </div>
+                        <div class="col s8 offset-s2 m7">
+                            <p style="color: #1a237e" class="secondary-text-color">{{$salida->producto->nombre}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 m5">
+                            <p style="color: #d50000" class="primary-text-color secondary-text-style">Departamento:</p>
+                        </div>
+                        <div class="col s8 offset-s2 m7">
+                            <p style="color: #1a237e" class="secondary-text-color">{{$salida->departamento->nombre}}</p>
                         </div>
                     </div>
 
