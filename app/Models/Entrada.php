@@ -14,7 +14,7 @@ class Entrada extends Model
 
     public function Producto(){
 
-        return $this->hasMany(Producto::class, 'id_producto');
+        return $this->belongsTos(Producto::class, 'id_producto');
 
     }
 

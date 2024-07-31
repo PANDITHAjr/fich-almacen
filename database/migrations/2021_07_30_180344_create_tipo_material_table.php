@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepartamentoTable extends Migration
+class CreateTipoMaterialTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateDepartamentoTable extends Migration
      */
     public function up()
     {
-        Schema::create('departamento', function (Blueprint $table) {
+        Schema::create('tipo_material', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_depa');
+            $table->string('nombre');
             $table->timestamps();
-
-
-            $table->unsignedBigInteger('id_salida');
-            $table->foreign('id_salida')->references('id')->on('salida')->cascadeOnDelete()->cascadeOnUpdate();
-
         });
     }
 
@@ -32,6 +27,6 @@ class CreateDepartamentoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departamento');
+        Schema::dropIfExists('tipo_material');
     }
 }

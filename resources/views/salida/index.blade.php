@@ -29,9 +29,9 @@
                         @foreach($salidas as $salida)
                             <tr>
                                 <td>{{ $salida->Producto->id }}</td>
-                                <td>{{ $salida->producto->nombre }}</td>
-                                <td>{{ $salida->TipoProducto->descripcion}}</td>
-                                <td>{{ $salida->unidad->nombre }}</td>
+                                <td>{{ $salida->Producto->nombre }}</td>
+                                <td>{{ $salida->TipoMaterial->nombre }}</td>
+                                <td>{{ $salida->Departamento->nombre }}</td>
                                 <td>{{ $salida->cantidad }}</td>
                                 <td>{{ $salida->personal->nombre}}</td>
                                 <td>{{ $salida->fecha }}</td>

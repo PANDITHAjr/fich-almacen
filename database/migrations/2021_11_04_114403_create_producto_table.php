@@ -16,7 +16,7 @@ class CreateProductoTable extends Migration
         Schema::create('producto', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('cantidad');
+            $table->integer('cantidad');
             $table->timestamps();
 
             $table->unsignedBigInteger('id_tipo_producto');

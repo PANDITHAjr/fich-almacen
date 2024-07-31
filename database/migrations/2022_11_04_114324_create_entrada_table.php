@@ -26,9 +26,6 @@ class CreateEntradaTable extends Migration
             $table->unsignedBigInteger('id_producto');
             $table->foreign('id_producto')->references('id')->on('producto')->cascadeOnDelete()->cascadeOnUpdate();
 
-            $table->unsignedBigInteger('id_productoo');
-            $table->foreign('id_productoo')->references('id')->on('producto')->cascadeOnDelete()->cascadeOnUpdate();
-
         });
     }
 

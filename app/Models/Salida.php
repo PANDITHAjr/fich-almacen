@@ -26,13 +26,8 @@ class Salida extends Model
         return $this->belongsTo(Producto::class, 'id_producto'); // Ajusta los nombres de las columnas si es necesario
     }
 
-    public function TipoProducto()
+    public function TipoMaterial()
     {
-        return $this->belongsTo(TipoProducto::class, 'id_tipo_producto'); // Ajusta los nombres de las columnas si es necesario
+        return $this->belongsTo(TipoMaterial::class, 'id_tipo_material');
     }
-    public function Unidad()
-    {
-        return $this->belongsTo(Unidad::class, 'id_unidad'); 
-    }
-
 }

@@ -21,16 +21,17 @@ class CreateSalidaTable extends Migration
             $table->timestamps();
 
             $table->unsignedBigInteger('id_personal');
-            $table->foreign('id_personal')->references('id')->on('producto')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('id_personal')->references('id')->on('personal')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->unsignedBigInteger('id_producto');
             $table->foreign('id_producto')->references('id')->on('producto')->cascadeOnDelete()->cascadeOnUpdate();
 
-            $table->unsignedBigInteger('id_tipo_producto');
-            $table->foreign('id_tipo_producto')->references('id')->on('tipo_producto')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->unsignedBigInteger('id_departamento');
+            $table->foreign('id_departamento')->references('id')->on('departamento')->cascadeOnDelete()->cascadeOnUpdate();
 
-            $table->unsignedBigInteger('id_unidad');
-            $table->foreign('id_unidad')->references('id')->on('unidad')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->unsignedBigInteger('id_tipo_material');
+            $table->foreign('id_tipo_material')->references('id')->on('tipo_material')->cascadeOnDelete()->cascadeOnUpdate();
+
           });
     }
 
