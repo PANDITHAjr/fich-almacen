@@ -19,6 +19,7 @@ class CreatePersonalTable extends Migration
             $table->string('apellido');
             $table->string('telefono');
             $table->string('direcion');
+            $table->string('profile_photo')->nullable(); 
             $table->timestamps();
 
             $table->unsignedBigInteger('id_tipo_personal');

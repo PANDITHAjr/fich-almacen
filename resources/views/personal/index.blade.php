@@ -14,7 +14,7 @@
                 <table class="striped" cellspacing="0" width="100%">
                     <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Foto</th>
                         <th>nombre</th>
                         <th>apellido</th>
                         <th>telefono</th>
@@ -24,7 +24,28 @@
                     <tbody>
                         @foreach($personales as $personal)
                             <tr>
-                                <td>{{ $personal->id }}</td>
+                                <td>
+                                    @if ($personales && $personal->profile_photo)
+                                        <div class="col s12 center-align">
+                                            <div class="profile-photo-container">
+                                                <img class="circle responsive-img"
+                                                     src="{{ asset('images/personal/' . $personal->profile_photo) }}"
+                                                     alt="Foto de Perfil"
+                                                     style="width: 100px; height: 100px; object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    @else
+                                        <div class="col s12 center-align">
+                                            <div class="profile-photo-container">
+                                                <img src="https://p4.wallpaperbetter.com/wallpaper/835/203/668/man-profile-silhouette-circle-wallpaper-preview.jpg"
+                                                     alt="Foto de Perfil"
+                                                     class="circle responsive-img"
+                                                     style="width: 100px; height: 100px; object-fit: cover;">
+                                            </div>
+                                        </div>
+                                    @endif
+                                </td>
+
                                 <td>{{ $personal->nombre }}</td>
                                 <td>{{ $personal->apellido }}</td>
                                 <td>{{ $personal->telefono }}</td>
